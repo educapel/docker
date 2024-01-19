@@ -12,7 +12,7 @@ I developed a comprehensive web-based loan default prediction system using a var
 ## Deployment with Docker
 Containerization: To simplify deployment and ensure consistency, I containerized the application with Docker.
 Dockerfile Creation:
-Base Image: I started with python:3.8-slim as a base due to its lightweight yet comprehensive nature.
+Base Image: I started with python:3.8 base image
 Environment Setup: The Dockerfile detailed the environment setup, including system dependencies and a non-root user for enhanced security.
 Dependencies Installation: Using the COPY and pip install commands, I ensured all Python dependencies were installed.
 Application Code: The application code, including FastAPI files, frontend assets, and the ML model, were copied into the container.
