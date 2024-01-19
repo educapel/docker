@@ -10,19 +10,13 @@ I developed a comprehensive web-based loan default prediction system using a var
 2.	CSS for Styling: I ensured the form was not only functional but also user-friendly and visually appealing using CSS. Particular attention was paid to making the design responsive for different device screens.
    
 ## Deployment with Docker
-1.	Containerization: To streamline deployment, I containerized the application using Docker. I wrote a Dockerfile that outlined the steps to create a Docker image of the application.
-2.	Consistency Across Environments: By using Docker, I guaranteed that the application would run identically in different environments, be it development, staging, or production.
-   
-## Creating the Dockerfile
-4.	Base Image: I started by selecting an appropriate base image. For a Python-based application like mine, an image like python:3.8-slim is a suitable choice because it's lightweight yet contains all the necessary Python dependencies.
-   
-6.	Environment Setup: The Dockerfile includes commands to set up the environment. This involves updating the package list, installing necessary system dependencies, and setting up a non-root user for security purposes.
-   
-8.	Dependencies Installation: I used the COPY command to transfer the requirements.txt file into the container and then ran pip install to install the Python dependencies specified in that file.
-   
-10.	Copying Application Code: The next step was to copy the application source code into the container. This includes all my FastAPI application files, the HTML and JavaScript files for the frontend, and the trained machine learning model.
-    
-11.	Exposing Ports and Setting the Command: I specified which port the application should run on within the container using the EXPOSE command. The CMD command was used to define the command that runs the application, typically starting the FastAPI server using Uvicorn.
+Containerization: To simplify deployment and ensure consistency, I containerized the application with Docker.
+Dockerfile Creation:
+Base Image: I started with python:3.8-slim as a base due to its lightweight yet comprehensive nature.
+Environment Setup: The Dockerfile detailed the environment setup, including system dependencies and a non-root user for enhanced security.
+Dependencies Installation: Using the COPY and pip install commands, I ensured all Python dependencies were installed.
+Application Code: The application code, including FastAPI files, frontend assets, and the ML model, were copied into the container.
+Port and Command: I defined the application's port with EXPOSE and used CMD to set the command for starting the FastAPI server.
 
 ## Additional Project Components
 1.	Requirements File: I maintained a requirements.txt file to keep track of all Python dependencies, ensuring reproducibility and ease of setup in different environments.
@@ -36,7 +30,22 @@ I developed a comprehensive web-based loan default prediction system using a var
 •	Testing the Docker Container: Before deploying, I rigorously tested the Docker container to ensure everything functioned correctly.
 •	Deployment to Production: Once satisfied with the testing, I deployed the Docker container to a production server, making the application live and accessible.
 
+## Creating a Repository on Docker Hub
+Account Registration: I signed up for Docker Hub and logged into my account.
+Repository Creation: Navigating to the repositories tab, I created a new repository for the application.
+Docker Image Creation: I built a Docker image from the Dockerfile and prepared it for pushing to the repository.
+
+## Pushing Docker Image to Docker Hub
+Image Upload: The Docker image was successfully pushed to Docker Hub, making it available for widespread use.
+
+## GitHub Actions for Continuous Integration and Continuous Deployment (CI/CD)
+To enhance the development process, I implemented GitHub Actions:
+
+Automated Testing: The workflow automatically runs tests on every push and pull request, ensuring code quality and functionality.
+Linting: Code is linted with flake8 for style and error checks.
+Python Environment Setup: The workflow sets up the specified Python environment for consistent testing.
+Dependency Management: All project dependencies are installed as part of the workflow.
+Pytest Integration: The workflow includes pytest to run all unit tests, verifying the application's stability with each change.
+
 ## Conclusion
-Through this project, I demonstrated my ability to integrate machine learning, backend and frontend development, and modern deployment techniques. This application serves as a practical tool in the financial sector, showcasing a full-stack AI solution's potential.
-
-
+This project exemplified my capabilities in integrating various technologies - machine learning, backend and frontend development, Docker containerization, and CI/CD practices with GitHub Actions. The result was a functional, reliable, and user-friendly loan default prediction system that stands as a testament to the potential of full-stack AI solutions in the financial sector.
