@@ -48,6 +48,4 @@ Dependency Management: All project dependencies are installed as part of the wor
 Pytest Integration: The workflow includes pytest to run all unit tests, verifying the application's stability with each change.
 
 ## Conclusion
-Through this project, I demonstrated my ability to integrate machine learning, backend and frontend development, and modern deployment techniques. This application serves as a practical tool in the financial sector, showcasing a full-stack AI solution's potential.
-
-
+This project exemplified my capabilities in integrating various technologies - machine learning, backend and frontend development, Docker containerization, and CI/CD practices with GitHub Actions. The result was a functional, reliable, and user-friendly loan default prediction system that stands as a testament to the potential of full-stack AI solutions in the financial sector
